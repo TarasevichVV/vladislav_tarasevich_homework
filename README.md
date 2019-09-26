@@ -23,6 +23,7 @@ g. Screenshot of virtual host with cronolog configuration, output of tree comman
 # screenshot 8
 h. Screenshot of virtual host configuration with logging to syslog. Screenshots of syslog entries related to access/error web server logging.
 ![img8](./img/10.png)
+![img9](./img/last.png)
 ##Check
 1. What is apache graceful restart
 The USR1 or graceful signal causes the parent process to advise the children to exit after their current request (or to exit immediately if they're not serving anything). The parent re-reads its configuration files and re-opens its log files. As each child dies off the parent replaces it with a child from the new generation of the configuration, which begins serving new requests immediately.
