@@ -26,10 +26,10 @@
     </servlet-mapping>
 
     <servlet>
-<multipart-config>
-</multipart-config>
         <servlet-name>MemoryLeakServlet</servlet-name>
         <servlet-class>com.epam.nix.java.testapp.servlet.MemoryLeakServlet</servlet-class>
+              <multipart-config>
+              </multipart-config>
     </servlet>
 
     <servlet-mapping>
