@@ -15,4 +15,4 @@ User=tomcat
 Group=tomcat
 [Install]
 WantedBy=multi-user.target
-EOF
+
