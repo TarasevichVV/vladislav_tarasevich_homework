@@ -31,6 +31,7 @@ create_custom_template(){
 }
 tempid=$(create_custom_template)
 TEMP_ID=$(echo $tempid | cut -d '"' -f 10)
+
 create_host(){
     curl -i -X POST -H 'Content-Type: application/json-rpc' -d "{\"jsonrpc\":\"2.0\",\"method\":\"host.create\",\"params\":{\"host\": \"$HOSTNAME\", \"interfaces\":[{\"type\":1,\"main\":1,\"useip\":1,\"ip\":\"$IP\",\"dns\":\"\",\"port\":\"10050\"}],\"groups\":[{\"groupid\":\"$HOSTGROUPID\"}],\"templates\":[{\"templateid\":\"$TEMP_ID\"}]},\"auth\":\"$AUTH_TOKEN\",\"id\":1}" $API 
 }

@@ -12,6 +12,7 @@ installs1(){
     mysql -uroot -e "grant all privileges on zabbix.* to $user@localhost identified by '$password'"
     zcat /usr/share/doc/zabbix-server-mysql-*/create.sql.gz | mysql -uzabbix -p$password zabbix
     cp /vagrant/confs/zabbix_server.conf /etc/zabbix/zabbix_server.conf
+    cp /vagrant/confs/zabbix.conf.php /etc/zabbix/web/zabbix.conf.php
     cp /vagrant/confs/httpd.conf /etc/httpd/conf/httpd.conf
     cp /vagrant/confs/zabbix.conf /etc/httpd/conf.d/zabbix.conf
     systemctl start zabbix-server
