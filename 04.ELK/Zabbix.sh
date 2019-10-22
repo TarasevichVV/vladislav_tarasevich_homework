@@ -6,10 +6,10 @@ installs1(){
     cp /vagrant/confs/elastic.repo /etc/yum.repos.d/
     yum install -y elasticsearch
     rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
-    cp /vagrant/conf/kibana.repo /etc/yum.repos.d/
+    cp /vagrant/confs/kibana.repo /etc/yum.repos.d/
     yum install -y kibana
     cp /vagrant/confs/kibana.yml /etc/kibana/kibana.yml
-    cp /vagrant/confs/elasticsearch/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
+    cp /vagrant/confs/elasticsearch.yml /etc/elasticsearch/elasticsearch.yml
     systemctl start elasticsearch
     systemctl start kibana
     systemctl enable elasticsearch
